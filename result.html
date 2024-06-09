@@ -1,0 +1,35 @@
+<html>
+<head>
+	<title>Square App By shweta</title>
+	<link rel="stylesheet" href="mystyle.css">
+</head>
+<body>
+<center>
+	<div class="nav">
+		<a href="index.html">Home</a>
+		<a href="about.html">About Us</a>
+	</div>
+	<h1>Result</h1>
+	<h2 id="msg"></h2>
+
+	<script>
+		let msg = document.getElementById("msg");
+		let res=localStorage.getItem("res");
+
+		if(res===null)
+		{
+			msg.innerHTML="u are trying to trespass";
+			function goback()
+			{
+				window.location.href="index.html";
+			}
+			setTimeout(goback,5000);
+		}
+		else
+		{
+			msg.innerHTML="square="+parseFloat(res).toFixed(2);
+		}
+	</script>
+</center>
+</body>
+</html>
